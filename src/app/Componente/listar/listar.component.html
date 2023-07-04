@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Lista de Celulares</h2>
+    </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"># Id</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Modelo</th>
+      <th scope="col">Color</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Capacidad</th>
+
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of celular">
+      <td>{{c.idCelular}}</td>
+      <td>{{c.marca}}</td>
+      <td>{{c.modelo}}</td>
+      <td>{{c.color}}</td>
+      <td>{{c.precio}}</td>
+      <td>{{c.capacidad}}</td>
+
+      <td><button type="button" class="btn btn-outline-success" (click)="editar(c)">Editar</button></td>
+        <td><button type="button" class="btn btn-outline-danger" (click)="eliminar(c)">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
